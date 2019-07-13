@@ -22,10 +22,10 @@ func main() {
 		w.WriteHeader(http.StatusOK)
 		io.WriteString(w, "Hello World From Sunny California - master!\n")
 
-		for _, e := range os.Environ() {
-			pair := strings.Split(e, "=")
-			io.WriteString(w, pair[0]+"="+pair[1]+"\n")
-		}
+// 		for _, e := range os.Environ() {
+// 			pair := strings.Split(e, "=")
+// 			io.WriteString(w, pair[0]+"="+pair[1]+"\n")
+// 		}
 
 		for i := 1; i <= 90; i++ {
 			io.WriteString(w, strconv.Itoa(f())+"\n")
